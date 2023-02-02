@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادارة منتجات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="crud">
+    <div class="head">
+        <h2>Crud System</h2>
+        <p>Product Mangment System</p>
+    </div>
+    <div class="inputs">
+<input type="text" required placeholder="title" id="title">
+<div class="price">
+    <input  type="number"  required onkeyup = "getTotal()" id="price" placeholder="price">
+    <input  type="number"   onkeyup = "getTotal()" placeholder="taxes" id="taxes">
+    <input  type="number"   onkeyup = "getTotal()"  placeholder="ads"id="ads">
+    <input  type="number"   onkeyup = "getTotal()"  placeholder="discount" id="discount">
+    <small id="total">
+
+    </small>
+</div>
+<input type="number" placeholder="Count" id="count">
+<input type="text"  placeholder="Category" id="category">
+<button id="submit" style="   font-family: 'Montserrat', sans-serif;
+font-weight: 700;">Create</button>
+    </div>
+    <div class="outputs">
+<div class="searchBlock">
+    <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+    <div class="btnSearch">
+<button onclick="getSearchMood(this.id)" id="searchTitle"style="   font-family: 'Montserrat', sans-serif;
+font-weight: 700;">search by title</button>
+<button id="searchCategory"style="   font-family: 'Montserrat', sans-serif;
+font-weight: 700;"onclick="getSearchMood(this.id)">search by category</button>
+    </div>
+
+</div>
+<div id="deleteAll">
+    
+</div>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>Ads</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Category</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+ 
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
